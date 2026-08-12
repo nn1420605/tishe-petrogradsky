@@ -1,0 +1,22 @@
+{
+  "name": "Тише — комфортные маршруты",
+  "short_name": "Тише",
+  "description": "Пешие маршруты по Петроградскому району с учётом шума, зелёных зон и проходных дворов.",
+  "id": "./",
+  "start_url": "./?source=home-screen",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
+  "orientation": "portrait-primary",
+  "background_color": "#f4f1e8",
+  "theme_color": "#173d33",
+  "categories": ["navigation", "travel", "lifestyle"],
+  "lang": "ru",
+  "icons": [
+    {"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}
+  ],
+  "shortcuts": [
+    {"name":"Зелёный маршрут","short_name":"Зелёный","url":"./?mode=green","icons":[{"src":"icon.svg","sizes":"any","type":"image/svg+xml"}]},
+    {"name":"Тихий маршрут","short_name":"Тихий","url":"./?mode=quiet","icons":[{"src":"icon.svg","sizes":"any","type":"image/svg+xml"}]}
+  ]
+}
