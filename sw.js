@@ -1,5 +1,5 @@
-const VERSION='tishe-mobile-v9-four-districts';
-const CORE=['./','./index.html','./manifest.webmanifest','./icon.svg','./map-content.js','./tile-meta.json'];
+const VERSION='tishe-mobile-v10-three-routes';
+const CORE=['./','./index.html','./manifest.webmanifest','./icon.svg','./map-content.js','./tile-meta.json','./compare-routes.css','./compare-routes.js'];
 self.addEventListener('install',event=>event.waitUntil(caches.open(VERSION).then(c=>c.addAll(CORE)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==VERSION).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch',event=>{
