@@ -1,5 +1,5 @@
-const VERSION='tishe-mobile-v10-three-routes';
-const CORE=['./','./index.html','./manifest.webmanifest','./icon.svg','./map-content.js','./tile-meta.json','./compare-routes.css','./compare-routes.js'];
+const VERSION='tishe-mobile-v11-worker-time-layers';
+const CORE=['./','./index.html','./manifest.webmanifest','./icon.svg','./map-content.js','./tile-meta.json','./compare-routes.css?v=11','./compare-routes.js?v=11','./route-worker.js?v=11'];
 self.addEventListener('install',event=>event.waitUntil(caches.open(VERSION).then(c=>c.addAll(CORE)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==VERSION).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch',event=>{
