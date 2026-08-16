@@ -1,4 +1,4 @@
-const VERSION='tishe-mobile-v17e-map-points';
+const VERSION='tishe-mobile-v17f-safe-geometry';
 const CORE=['./','./index.html','./manifest.webmanifest','./icon.svg','./map-content.js','./tile-meta.json','./compare-routes.css?v=11','./compare-routes.js?v=17e','./route-worker.js?v=16','./smooth-desktop.css?v=12b','./smooth-desktop.js?v=12b','./responsive-layout.css?v=13b','./maps-ui-v17.css?v=17b','./maps-ui-v17.js?v=17b'];
 self.addEventListener('install',event=>event.waitUntil(caches.open(VERSION).then(c=>c.addAll(CORE)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==VERSION).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
